@@ -1,16 +1,16 @@
-function square(x) {
+// function square(x) {
 
-	var TypeError = new Error("square function must be given a number");
+// 	var TypeError = new Error("square function must be given a number");
 
-	if (typeof(x) !== 'number') {
-		throw(TypeError);
-	}
- return x * x;
-}
+// 	if (typeof(x) !== 'number') {
+// 		throw(TypeError);
+// 	}
+//  return x * x;
+// }
 
-function testingMechTester(x) {
-	return x;
-}
+// function testingMechTester(x) {
+// 	return x;
+// }
 
 // Should return 2 // done
 // Does the click button generate the 2
@@ -36,3 +36,7 @@ $('.create-die').click(function(){
   var sides = $('.die-sides').val();
   gameDie = new Die(sides);
 })
+
+function renderRandomDieValue () {
+	$('.roll-result').html("You rolled a " + gameDie.roll() ".")
+}
