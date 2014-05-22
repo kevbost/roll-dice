@@ -1,0 +1,205 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+// @import 'sass-bootstrap/lib/bootstrap';
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+// ============================================
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // background-color: black;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    background-color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// ============================================
+
+/* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ #tridiv {
+  perspective: 800px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 75%;
+}
+.face {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 50%;
+  left: 50%;
+  margin: -40em 0 0 -40em;
+}
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+}
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+[class*="pyramid"] .face-wrapper .face {
+  transform: rotateZ(45deg) translateX(-35.35%) translateY(35.35%);
+}
+[class*="pyramid"] .bk {
+  left: 100%;
+}
+[class*="pyramid"] .bm {
+  top: 100%;
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="pyramid"] .rt, [class*="pyramid"] .lt {
+  transform-origin: 50% 0;
+}
+/* .cub-1 styles */
+.cub-1 {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(-27.8deg) rotateZ(-0.8deg);
+  opacity:1;
+  width:14em;
+  height:14em;
+  margin:-7em 0 0 -7em;
+}
+.cub-1 .ft {
+  transform:translateZ(6.3125em);
+}
+.cub-1 .bk {
+  transform:translateZ(-6.3125em) rotateY(180deg);
+}
+.cub-1 .rt, .cub-1 .lt {
+  width:12.625em;
+  height:14em;
+}
+.cub-1 .tp, .cub-1 .bm {
+  width:14em;
+  height:12.625em;
+}
+.cub-1 .face {
+  background-color:#FFFFFF;
+}
+/* .pyr-1 styles */
+.pyr-1 {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:4em;
+  height:5em;
+  margin:-2.5em 0 0 -2em;
+}
+.pyr-1 .face-wrapper {
+  width:4em;
+  height:2em;
+}
+.pyr-1 .face-wrapper .face {
+  width:4em;
+  height:4em;
+}
+.pyr-1 .ft {
+  transform:scaleZ(2.692582403567252) scaleY(2.692582403567252) rotateX(21.801409486351798deg);
+}
+.pyr-1 .bk {
+  transform:scaleZ(2.692582403567252) scaleY(2.692582403567252) rotateX(-21.801409486351798deg) rotateY(180deg);
+}
+.pyr-1 .rt {
+  transform:scaleX(2.692582403567252) scaleY(2.692582403567252) rotateZ(21.801409486351798deg) rotateY(-90deg);
+}
+.pyr-1 .lt {
+  transform:scaleX(2.692582403567252) scaleY(2.692582403567252) rotateZ(-21.801409486351798deg) rotateY(90deg);
+}
+.pyr-1 .bm {
+  width:4em;
+  height:4em;
+}
+.pyr-1 .face {
+  background-color:#FFFFFF;
+}
