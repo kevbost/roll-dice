@@ -37,6 +37,6 @@ $('.create-die').click(function(){
   gameDie = new Die(sides);
 })
 
-function renderRandomDieValue () {
-	$('.roll-result').html("You rolled a " + gameDie.roll() ".")
-}
+// function renderRandomDieValue () {
+// 	$('.roll-result').html("You rolled a " + gameDie.roll() ".")
+// }

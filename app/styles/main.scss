@@ -13,48 +13,127 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    // background-color: black;
+// margin: 20px;
+	background-color: orange;
+}
+
+.container {
+	// position: relative;
+	// margin:13px;
+	background-color: white;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header {
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
 }
 
 /* Custom page footer */
 .footer {
+	// position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 19px;
+    // padding-top: 20px;
+    // margin-top: 20px;
     color: #777;
     border-top: 1px solid #e5e5e5;
     background-color: orange;
 }
 
 
-
-
-
-
-
-
-
-
-
-
 // ============================================
+// Iron Yard Styling
+
+.diceContainer {
+	// margin: 0 auto;
+	// width: 680px;
+	padding-top: 20px;
+	height: 90%;
+	background-color: white;
+}
+
+.graphics {
+	position: relative;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	margin: 0 auto;
+	// margin-top: 20px;
+	width: 680px;
+	height: 300px;
+	background-color: #ffffff;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.result {
+	// display: block;
+	font-family: 'VT323';
+	color: rgba(0, 0, 0, 0.75);
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	opacity: 0;
+	top: 145px;
+	left: -2px;
+	font-size: 100px;
+	line-height: 0;
+	// left: 274px;
+	z-index: 2;
+	// -webkit-animation: results 1s 2s 1 normal backwards;
+	-webkit-animation-name: results;
+	-webkit-animation-delay: 10s;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+}
+	@-webkit-keyframes results {
+	  0%   { opacity: 0; }
+	  100% { opacity: 1; }
+}
+
+.input-area {
+	width: 680px;
+	margin: 0 auto;
+}
+
+.input-die {
+	position: relative;
+	display: inline-block;
+	// height: 20px;
+}
+
+.button {
+	width: 100px;
+	// height: 20px;
+	// background-color: black;
+}
+
+
+.instructions {
+	margin: 20px auto;
+	// padding: 10px 20px;
+	width: 680px;
+	// height: 20px;
+	background-color: blue;	
+	& p {
+		padding: 20px;
+	}
+}
 
 /* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ #tridiv {
   perspective: 800px;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
   background: transparent;
-  font-size: 75%;
+  font-size: 100%;
 }
 .face {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
@@ -130,76 +209,54 @@ body {
 [class*="cuboid"] .bm {
   top: 100%;
 }
-[class*="pyramid"] .face-wrapper .face {
-  transform: rotateZ(45deg) translateX(-35.35%) translateY(35.35%);
-}
-[class*="pyramid"] .bk {
-  left: 100%;
-}
-[class*="pyramid"] .bm {
-  top: 100%;
-  transform: rotateX(-90deg) translateY(-50%);
-}
-[class*="pyramid"] .rt, [class*="pyramid"] .lt {
-  transform-origin: 50% 0;
-}
 /* .cub-1 styles */
 .cub-1 {
-  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(-27.8deg) rotateZ(-0.8deg);
+  // transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(-27.8deg) rotateZ(-0.8deg);
+  // transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
-  width:14em;
-  height:14em;
-  margin:-7em 0 0 -7em;
+  width:10em;
+  height:10em;
+  margin:-5em 0 0 -5em;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+	-webkit-animation-name: rotate;
+	-webkit-animation-duration: 10s;
+	// -webkit-animation-timing-function: ease-in;
+	// -webkit-animation-delay: 0;
+	-webkit-animation-iteration-count: 1;
+	// -webkit-animation-direction: forward;
+	// -webkit-animation-fill-mode: forward;
+	-webkit-animation-play-state: running;
 }
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+
+	// 50% {
+	// 	-webkit-transform: rotateX(360deg);
+	// }
+
+	to {
+		-webkit-transform: rotateX(1800deg) rotateY(2160deg) rotateZ(1800deg);
+	}
+}
+
 .cub-1 .ft {
-  transform:translateZ(6.3125em);
+  transform:translateZ(5em);
 }
 .cub-1 .bk {
-  transform:translateZ(-6.3125em) rotateY(180deg);
+  transform:translateZ(-5em) rotateY(180deg);
 }
 .cub-1 .rt, .cub-1 .lt {
-  width:12.625em;
-  height:14em;
+  width:10em;
+  height:10em;
 }
 .cub-1 .tp, .cub-1 .bm {
-  width:14em;
-  height:12.625em;
+  width:10em;
+  height:10em;
 }
 .cub-1 .face {
-  background-color:#FFFFFF;
-}
-/* .pyr-1 styles */
-.pyr-1 {
-  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity:1;
-  width:4em;
-  height:5em;
-  margin:-2.5em 0 0 -2em;
-}
-.pyr-1 .face-wrapper {
-  width:4em;
-  height:2em;
-}
-.pyr-1 .face-wrapper .face {
-  width:4em;
-  height:4em;
-}
-.pyr-1 .ft {
-  transform:scaleZ(2.692582403567252) scaleY(2.692582403567252) rotateX(21.801409486351798deg);
-}
-.pyr-1 .bk {
-  transform:scaleZ(2.692582403567252) scaleY(2.692582403567252) rotateX(-21.801409486351798deg) rotateY(180deg);
-}
-.pyr-1 .rt {
-  transform:scaleX(2.692582403567252) scaleY(2.692582403567252) rotateZ(21.801409486351798deg) rotateY(-90deg);
-}
-.pyr-1 .lt {
-  transform:scaleX(2.692582403567252) scaleY(2.692582403567252) rotateZ(-21.801409486351798deg) rotateY(90deg);
-}
-.pyr-1 .bm {
-  width:4em;
-  height:4em;
-}
-.pyr-1 .face {
   background-color:#FFFFFF;
 }
