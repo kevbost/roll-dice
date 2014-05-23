@@ -1,7 +1,6 @@
 /* global describe, it */
 //just wanna see if this works
-(function() {
-	'use strict';
+
 
 	// describe('Give it some context', function() {
 	// 	describe('maybe a bit more context here', function() {
@@ -52,6 +51,9 @@
 	// 	});
 	// });
 
+
+(function() {
+	'use strict';
 
 	describe("Create Die Button", function() {
 
