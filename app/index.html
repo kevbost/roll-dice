@@ -16,80 +16,35 @@
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sarina|Sonsie+One|Molle:400italic|Wendy+One|Shojumaru|Sigmar+One|Monoton|Bangers|Rock+Salt|Sancreek|Slackey|Kranky|Rye|Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 	<!-- endbuild -->
 	<script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
-	<!--[if lt IE 10]>
-	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+	
 	<div class="container">
-		<div class="header">
-		</div>
-		
-		<div class="diceContainer">
-			<div class="instructions"></div>
-			<div class="graphics">
-				<div class="roll-result"></div>
-				<div class="lets-roll button"></div>
-				<!-- /////////////////////////////////////// -->
-				<!-- <div id="tridiv">
-					<div class="scene" style="
-					-webkit-animation:rotateX(-15deg) rotateY(-179deg);">
-						<div class="shape cuboid-1 cub-1">
-							<div class="face ft">
-								<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.556863);"></div>
-							</div>
-							<div class="face bk">
-								<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.0431373);"></div>
-							</div>
-							<div class="face rt">
-								<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.352941);"></div>
-							</div>
-							<div class="face lt">
-								<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.243137);"></div>
-							</div>
-							<div class="face bm">
-								<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.380392);"></div>
-							</div>
-							<div class="face tp">
-								<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.215686);"></div>
-							</div>
-						</div>
-						<div class="shape pyramid-1 pyr-1">
-							<div class="face-wrapper ft">
-								<div class="face">
-									<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.384314);"></div>
-								</div>
-							</div>
-							<div class="face-wrapper bk">
-								<div class="face">
-									<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.145098);"></div>
-								</div>
-							</div>
-							<div class="face-wrapper lt">
-								<div class="face">
-									<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.180392);"></div>
-								</div>
-							</div>
-							<div class="face-wrapper rt">
-								<div class="face">
-									<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.415686);"></div>
-								</div>
-							</div>
-							<div class="face bm">
-								<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.384314);"></div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- /////////////////////////////////////// -->
+		<div class="header"><h1>roll of the dice.</h1></div>
+
+		<div class="roll-result">
+            <!-- <h2>You Rolled a 6!</h2> -->
+        </div>
+
+        <div class="card">
+        	<div id="tridiv"> </div>
+
+			<div class="roll-info">
+				<div class="intro"><p>Input a number in the space below to choose how many sides you'd like your dice to have. <br><br> Once you've chosen your lucky number, roll the dice to see where Lady Luck lands!</p></div>
 			</div>
-		</div>
-		<div class="footer">
-			<p>♥ THE IRON YARD</p>
-		</div>
+		</div>	
+        
+	<div class="input-container">
+		<input type="text" placeholder="Choose Your No." class="dice-input create-die">
+        <div class="create-die button">Roll the Dice</div>
 	</div>
+	</div>	
+
+		
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
 	<script src="bower_components/jquery/jquery.js"></script>
