@@ -29,7 +29,7 @@ function Die (sides) {
     var result = Math.floor(Math.random() * this.sides + 1 );
     console.log('rolled 1d '+ this.sides, " for ", result);
     return result;
-  }
+  };
 }
 
 // Roll a 6 sided die
@@ -51,14 +51,10 @@ $('.create-dice.roll-six-sides').click(function() {
 $('.create-dice.roll-any-sides').click(function() {
 	var sides = $('.input-die.roll-any-sides').val();
 	gameDie = new Die(sides);
-	if ( sides = 3 ) {
-		alert("bitch plz")
-	} else {
-	$('.create-dice.roll-any-sides').remove();
+	// $('.create-dice.roll-any-sides').remove();
 	$('.shape.cuboid-1.cub-1.cub-b').addClass("activate");
 	console.log(sides);
 	$('.result.cub-b').text(gameDie.roll()).addClass("activate");
-}
 });
 
 
