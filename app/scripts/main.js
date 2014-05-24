@@ -1,5 +1,3 @@
-'use strict';
-
 function Die (sides) {
   this.sides = parseInt(sides);
  
@@ -10,17 +8,20 @@ function Die (sides) {
   }
 }
  
-$('.create-die').click(function(){
-  var sides = $('.die-sides').val();
+$('.create-die.button').click(function(){
+  var sides = $('.dice-input.create-die').val();
   gameDie = new Die(sides);
+  console.log(sides);
+  $('.intro').remove();
+  $('#tridiv').addClass('activate');
+  $('.roll-result').html(gameDie.roll());
+});
 
-  $()
-})
+// function renderRandomDieValue () {
+//   $('.roll-result').html("You rolled a " + gameDie.roll() ".")
+// }
 
-function renderRandomDieValue () {
-  $('.roll-result').html("You rolled a " + gameDie.roll() ".")
-}
+// function showRollResult() {
+//   $('.roll-result').addClass('active')
+// }
 
-function showRollResult() {
-  $('.roll-result').addClass('active')
-}
