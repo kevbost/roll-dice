@@ -52,7 +52,7 @@ body {
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
-  padding: 205px 0;
+  // padding: 205px 0;
   z-index: 2;
 }
 
@@ -74,6 +74,9 @@ body {
 .input-container {
   width: 640px;
   margin: 0 auto;
+  display: inline;
+  position: relative;
+  top: 10px;
 }
 
 input {
@@ -82,17 +85,18 @@ input {
 
 .dice-input {
     position: relative;
+    top: 0px;
     font-family: 'Roboto Slab', serif;
     font-size: 14px;
     font-weight: 300;
     color: #9b59b6;
     width: 150px;
-    height: 30px;
+    height: 40px;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 3px;
-    margin: 25px 220px 5px;
-    padding: 4px 20px 4px 8px;
+    // margin: 25px 0px 5px;
+    // padding: 4px 20px 4px 8px;
     background: #fcfcfc;
     // box-shadow: 1px 1px 0 #fff;
     // -webkit-box-shadow: 1px 0 10px #9b59b6;
@@ -101,19 +105,20 @@ input {
 }
 
 .button {
+		position: relative;
+		top: 0px;
     width: 150px;
     height: 50px;
     border-radius: 2px;
     background-color: #9b59b6;
     font-family: 'Roboto Slab', serif;
     color: #f1c40f;
-    margin: 15px 235px;
-    // margin-top: 15px;
-    // margin-left: 10px;
-    line-height: 50px;
+    // margin: 15px 235px;
+    padding: 10px;
+    line-height: 43px;
     text-align: center;
     text-decoration: uppercase;
-    // display: inline-block;
+    display: inline;
     -webkit-box-shadow: 1px 0 4px #f1c40f;
     box-shadow: 1px 0 4px #f1c40f;
 
@@ -300,3 +305,8 @@ p {
 .cub-1 .face {
   background-color:#FFFFFF;
 }
+
+
+
+
+// stone
