@@ -65,7 +65,7 @@
 		});
 
 		it("should create a die with sides equal the input value", function() {
-			var inputVal = parseInt($('.die-sides').val())
+			var inputVal = parseInt($('.die-sides').val());
 			expect(gameDie.sides).to.equal(inputVal);
 		});
 
@@ -81,7 +81,7 @@
 		it("should accept a number or a number as a string as its argument", function() {
 			var die = new Die('7');
 			expect(die.sides).to.equal(7);
-		})
+		});
 
 		describe("imparts a roll function", function() {
 			it("that returns between its min and max values", function() {
@@ -90,8 +90,7 @@
 				for (var i = 0; i < 1000; i += 1) {
 					expect(die.roll()).to.be.within(1, 7);
 				}
-			})
-		})
-
-	})
+			});
+		});
+	});
 })();
