@@ -33,7 +33,7 @@ body {
   background-image: url('/images/stardust.png');
   background-position: left-top;
   border-radius: 4px;
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
   -webkit-box-shadow: 1px 0 10px #9b59b6;
   box-shadow: 1px 0 10px #9b59b6;
 }
@@ -52,28 +52,44 @@ body {
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
-  padding: 205px 0;
+  // padding: 205px 0;
   z-index: 2;
+  // opacity: 0;
+	-webkit-animation-name: results;
+	-webkit-animation-delay: 5s;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-play-state: paused;
+	&.h2Class {
+		color: black;
+	}
+	&.activate {
+		opacity: 0;
+		-webkit-animation-play-state: running;
+	}
+}
+	@-webkit-keyframes results {
+	  0%   { opacity: 0; }
+	  100% { opacity: 1; }
 }
 
-// #tridiv {
-//   position: absolute;
-//   top: 40%;
-//   left: 45%;
-//   width: 100px;
-//   height: 100px;
-//   background-color: red;
-//   margin: 0 auto;
-//   display: none;
 
-//   &.activate {
-//     display: block;
-//   }
-// }
+
+.intro {
+	position: relative;
+	width: 470px;
+	height: 400px;
+	margin: 0 auto;
+}
+
 
 .input-container {
   width: 640px;
   margin: 0 auto;
+  display: inline;
+  position: relative;
+  top: 10px;
 }
 
 input {
@@ -82,17 +98,19 @@ input {
 
 .dice-input {
     position: relative;
+    top: 0px;
     font-family: 'Roboto Slab', serif;
     font-size: 14px;
     font-weight: 300;
     color: #9b59b6;
-    width: 150px;
-    height: 30px;
+    width: 325px;
+    height: 40px;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 3px;
-    margin: 25px 220px 5px;
-    padding: 4px 20px 4px 8px;
+    z-index: 3;
+    // margin: 25px 0px 5px;
+    // padding: 4px 20px 4px 8px;
     background: #fcfcfc;
     // box-shadow: 1px 1px 0 #fff;
     // -webkit-box-shadow: 1px 0 10px #9b59b6;
@@ -100,20 +118,49 @@ input {
     // display: inline-block;
 }
 
-.button {
+.button1 {
+		position: relative;
+		top: 0px;
+    // width: 150px;
+    height: 50px;
+    border-radius: 2px;
+    margin-right: 40px;
+    background-color: #f1c40f;
+    font-family: 'Roboto Slab', serif;
+    color: #9b59b6;
+    // margin: 15px 235px;
+    padding: 10px;
+    line-height: 43px;
+    text-align: center;
+    text-decoration: uppercase;
+    display: inline;
+    -webkit-box-shadow: 1px 0 4px #f1c40f;
+    box-shadow: 1px 0 4px #f1c40f;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #f1c40f;
+      color: #9b59b6;
+      -webkit-box-shadow: 1px 0 4px #9b59b6;
+      box-shadow: 1px 0 4px #9b59b6;
+  }
+}
+
+.button2 {
+		position: relative;
+		top: 0px;
     width: 150px;
     height: 50px;
     border-radius: 2px;
     background-color: #9b59b6;
     font-family: 'Roboto Slab', serif;
     color: #f1c40f;
-    margin: 15px 235px;
-    // margin-top: 15px;
-    // margin-left: 10px;
-    line-height: 50px;
+    // margin: 15px 235px;
+    padding: 10px;
+    line-height: 43px;
     text-align: center;
     text-decoration: uppercase;
-    // display: inline-block;
+    display: inline;
     -webkit-box-shadow: 1px 0 4px #f1c40f;
     box-shadow: 1px 0 4px #f1c40f;
 
@@ -144,11 +191,13 @@ h1 {
 }
 
 h2 {
-  font-family: 'Slackey', cursive;
+  // font-family: 'Slackey', cursive;
   font-size: 50px;
   color: #9b59b6; 
   text-align: center;
-  padding-top: 50%;
+  position: relative;
+  top: 168px;
+  // padding-top: 50%;
   -webkit-text-shadow: 1px 0 1px #f1c40f;
   text-shadow: 1px 0 1px #f1c40f;
 }
@@ -160,7 +209,7 @@ p {
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
-  padding: 160px 20px;
+  padding: 140px 20px;
 }
 
 #tridiv {
@@ -170,7 +219,7 @@ p {
   width: 100%;
   height: 100%;
   background: transparent;
-  font-size: 100%;
+  font-size: 150%;
 }
 .face {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
@@ -264,7 +313,9 @@ p {
   // -webkit-animation-direction: forward;
   // -webkit-animation-fill-mode: forward;
   -webkit-animation-play-state: paused;
+  opacity: 0;
   &.activate {
+  	opacity: 1;
     -webkit-animation-play-state: running;
   }
 }
@@ -273,10 +324,6 @@ p {
   from {
     -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
-
-  // 50% {
-  //  -webkit-transform: rotateX(360deg);
-  // }
 
   to {
     -webkit-transform: rotateX(1800deg) rotateY(2160deg) rotateZ(360deg);
@@ -300,3 +347,8 @@ p {
 .cub-1 .face {
   background-color:#FFFFFF;
 }
+
+
+
+
+// stone
