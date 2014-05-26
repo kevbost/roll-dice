@@ -25,12 +25,23 @@ function Die (sides) {
 //   $('.roll-result').addClass('active')
 // }
 
-$('.create-die.button').click(function() {
+$('.create-die1.button1').click(function() {
 	// $('.create-dice.roll-six-sides').remove();
+  var sides = 6;
+  gameDie = new Die(sides);
 	$('.shape.cuboid-1.cub-1.cub-a').addClass("activate");
+	console.log(sides + 'die 1');
+  $('.intro').remove();
+	$('.tridiv.cub-a').addClass("activate h2Class");
+	$('.roll-result').html('<h2 class="h2Class">' + gameDie.roll() + '</h2>').addClass("activate");
+});
+
+$('.create-die2.button2').click(function() {
+	// $('.create-dice.roll-six-sides').remove();
   var sides = $('.dice-input.create-die').val();
-	gameDie = new Die(sides);
-	console.log(sides);
+  gameDie = new Die(sides + 'die 2');
+	$('.shape.cuboid-1.cub-1.cub-a').addClass("activate");
+	console.log(sides + 'die 2');
   $('.intro').remove();
 	$('.tridiv.cub-a').addClass("activate h2Class");
 	$('.roll-result').html('<h2 class="h2Class">' + gameDie.roll() + '</h2>').addClass("activate");
