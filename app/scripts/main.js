@@ -55,3 +55,4 @@ $('.create-die2.button2').click(function() {
     $('.shape.cuboid-1.cub-1').removeClass("activate").addClass("reset");
 };
   _.delay(resetting, 5000);
+});
