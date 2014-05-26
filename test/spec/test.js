@@ -1,5 +1,4 @@
 /* global describe, it */
-//just wanna see if this works
 (function() {
 	'use strict';
 
