@@ -219,7 +219,7 @@ p {
   width: 100%;
   height: 100%;
   background: transparent;
-  font-size: 150%;
+  font-size: 100%;
 }
 .face {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
@@ -299,7 +299,6 @@ p {
 .cub-1 {
   // transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(-27.8deg) rotateZ(-0.8deg);
   // transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity:1;
   width:10em;
   height:10em;
   margin:-5em 0 0 -5em;
@@ -315,8 +314,21 @@ p {
   -webkit-animation-play-state: paused;
   opacity: 0;
   &.activate {
-  	opacity: 1;
     -webkit-animation-play-state: running;
+  }
+  &.opacity {
+    opacity: 1;
+  }
+  &.reset {
+  width:10em;
+  height:10em;
+  margin:-5em 0 0 -5em;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation-name: anti-rotate;
+  -webkit-animation-duration: .1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: paused;
   }
 }
 
@@ -330,25 +342,50 @@ p {
   }
 }
 
+@-webkit-keyframes anti-rotate {
+  from {
+    -webkit-transform: rotateX(1800deg) rotateY(2160deg) rotateZ(360deg);
+  }
+
+  to {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
 .cub-1 .ft {
   transform:translateZ(5em);
+
+  &:after {
+    content: '';
+    font-size: 40px;
+  }
 }
 .cub-1 .bk {
   transform:translateZ(-5em) rotateY(180deg);
+
+  &:after {
+    content: '';
+    font-size: 40px;
+  }
 }
 .cub-1 .rt, .cub-1 .lt {
   width:10em;
   height:10em;
+
+  &:after {
+    content: '';
+    font-size: 80px;
+  }
 }
 .cub-1 .tp, .cub-1 .bm {
   width:10em;
   height:10em;
+
+  &:after {
+    content: '';
+    font-size: 90px;
+  }
 }
 .cub-1 .face {
   background-color:#FFFFFF;
 }
-
-
-
-
-// stone
