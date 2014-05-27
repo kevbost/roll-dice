@@ -77,7 +77,7 @@ body {
   -webkit-animation-play-state: paused;
   }
 }
-	@-webkit-keyframes resetting-Opacity {
+	@-webkit-keyframes results {
 	  0%   { opacity: 0; }
 	  100% { opacity: 1; }
 }
@@ -223,6 +223,7 @@ p {
   padding: 140px 20px;
 }
 
+
 #tridiv {
   perspective: 800px;
   position: relative;
@@ -363,40 +364,39 @@ p {
   }
 }
 
+h3 {
+  color: #9b59b6; 
+  text-align: center;
+  font-size: 60px;
+  top: 27%;
+  position: relative;
+}
+
 .cub-1 .ft {
   transform:translateZ(5em);
-
-  &:after {
-    content: '';
+  &.h2ClassFace {
     font-size: 40px;
   }
+  // &:after {
+  //   content: '';
+  //   font-size: 40px;
+  // }
 }
+
 .cub-1 .bk {
   transform:translateZ(-5em) rotateY(180deg);
-
-  &:after {
-    content: '';
-    font-size: 40px;
-  }
 }
+
 .cub-1 .rt, .cub-1 .lt {
   width:10em;
   height:10em;
-
-  &:after {
-    content: '';
-    font-size: 80px;
-  }
 }
+
 .cub-1 .tp, .cub-1 .bm {
   width:10em;
   height:10em;
-
-  &:after {
-    content: '';
-    font-size: 90px;
-  }
 }
+
 .cub-1 .face {
   background-color:#FFFFFF;
 }
