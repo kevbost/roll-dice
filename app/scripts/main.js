@@ -37,8 +37,8 @@ $('.create-die1.button1').click(function() {
   $('.shape.cuboid-1.cub-1').removeClass("reset");
 	console.log(sides + 'die 1');
   $('.intro').remove();
-	$('.roll-result').html('<h2 class="h2Class">' + gameDie.roll() + '</h2>').addClass("activate");
-    $('.ft').html('<h3>' + gameDie.roll() / 1 + '</h3>').addClass("activate");
+	// $('.roll-result').html('<h2 class="h2Class">' + gameDie.roll() + '</h2>').addClass("activate");
+  $('.ft').html('<h3>' + gameDie.roll() / 1 + '</h3>').addClass("activate");
   $('.bk').html('<h3>' + gameDie.roll() / 2 + '</h3>').addClass("activate");
   $('.rt').html('<h3>' + gameDie.roll() / 3 + '</h3>').addClass("activate");
   $('.lt').html('<h3>' + gameDie.roll() / 4 + '</h3>').addClass("activate");
