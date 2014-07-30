@@ -1,3 +1,0 @@
-#FINAL OBJECTIVE
-
-* Working Website
